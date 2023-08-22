@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%block t%}All Qr {%endblock%}
+{%block body%}
+
+<div class="center contener rund" style="height: 500px;">
+        <div class="form center rund flex">
+            <form action="" method="post" >
+                {% csrf_token %}
+                <div class="holder">
+                    <!-- <label for="link">Link</label> -->
+                    <input type="text" name="link" placeholder="LINK">
+                </div>
+               <div class="holder">
+                    <!-- <label for="link">Name</label> -->
+                    <input type="text" name="name" placeholder="NAME">
+               </div>
+               <button class="btn-dark rund">ADD</button>
+           </form>
+        </div>
+    </div>
+
+{%endblock%}

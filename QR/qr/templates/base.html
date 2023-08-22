@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="{%static 'main.css'%}">
+    <title>{%block t%}home{%endblock%}</title>
+</head>
+<body>
+    <section class="center">
+        <nav>
+            <ul class="menuItems center">
+                <li><a href='{%url "home"%}' data-item='HOME'>  HOME  </a></li>
+                <li><a href='{%url "allqr"%}' data-item='ALL QR'>ALL QR</a></li>
+                <li><a href='{%url "anal"%}' data-item='Analysis'>Analysis</a></li>
+                {% comment %} 
+                <li><a href='#' data-item='Blog'>Blog</a></li>
+                <li><a href='#' data-item='Contact'>Contact</a></li> {% endcomment %}
+            </ul>
+        </nav>
+    </section>
+    <section class="main">
+        {%block body%}
+        {%endblock%}
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

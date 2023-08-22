@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block t%}All Qr {%endblock%}
+{%block body%}
+
+<div class="center  grid QR">
+    {% for i in data %}
+    <div class="item rund">
+        <img src="{{ i.image.url }}" alt="" class="qr">
+        <div class="flex center sr">
+            <h3>{{i.name}}</h3>
+            <button class="btn-light rund"><a href="{{i.link}}">Vist</a></button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{%endblock%}
